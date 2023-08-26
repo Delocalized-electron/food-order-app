@@ -10,7 +10,9 @@ const AvailableMeals = () => {
 
   useEffect(() => {
     const fetchMeals = async () => {
-      const response = await fetch(`${process.env.REACT_APP_FOOD_DB_URL}`);
+      const response = await fetch(
+        `${process.env.REACT_APP_FOOD_DB_URL}/meals.json`
+      );
       if (!response.ok) {
         throw new Error("Something went wrong!");
       }
